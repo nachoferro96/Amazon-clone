@@ -1,0 +1,70 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 0px;
+  height: 58px;
+}
+
+.contenedor_buscador {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.input {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.lupa {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.botoncitos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sign_in {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.guest {
+  font-size: 10px;
+}
+
+.span_sign {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.canasta {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.basket {
+  margin-left: 10px;
+  margin-right: 10px;
+}
