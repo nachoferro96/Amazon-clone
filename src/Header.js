@@ -2,14 +2,22 @@ import React from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { Link } from "react-router-dom"
+import { useStateValue } from "./StateProvider"
 
 const Header = () => {
+
+  const [{basket}, dispatch] = useStateValue();
+
   return (
     <div className="header">
-      <img
+      <Link to="/">
+        <img
         src="http://pngimg.com/uploads/amazon/amazon_PNG25.png"
         className="logo"
       />
+      </Link>
+      
 
       <div className="contenedor_buscador">
         <input className="input" type="text" />
@@ -29,10 +37,14 @@ const Header = () => {
           <span className="guest">Your</span>
           <span className="span_sign">Prime</span>
         </div>
-        <div className="canasta">
+        
+        <Link to="/checkout">
+          <div className="canasta">
           <ShoppingBasketIcon />
-          <span className="span_sign basket">0</span>
+          <span className="span_sign basket">{basket?.length}</span>
         </div>
+        </Link>
+        
       </div>
     </div>
   );
