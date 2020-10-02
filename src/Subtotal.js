@@ -5,6 +5,8 @@ import { useStateValue } from "./StateProvider";
 import { getbaskettotal } from "./Reducer";
 
 function Subtotal() {
+const [{ basket }, dispatch] =useStateValue();
+
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -19,7 +21,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={getbaskettotal(basket)} //error aca no identificado aun
+        value= {getbaskettotal(basket)} //error aca no identificado aun
         displayType={"text"}
         thousandsSeparator={true}
         prefix={"$"}
