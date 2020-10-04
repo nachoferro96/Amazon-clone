@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider"
 
 export default function Login() {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const signin = e => {
+    e.preventDefault();
+  }
+
+  const register = e => {
+    e.preventDefault()
+  }
+
   return (
     <div className="login">
       <Link to="/">
@@ -15,10 +28,10 @@ export default function Login() {
         <h1>Sign in</h1>
         <form>
           <h5>email</h5>
-          <input type="text" />
+          <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
           <h5>Password</h5>
-          <input type="password" />
-          <button className="login-signin">Sign in</button>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <button className="login-signin" type="submit" onClick={signin}>Sign in</button>
         </form>
 
         <p>
@@ -27,7 +40,7 @@ export default function Login() {
           privacidad en caso de dudas.
         </p>
 
-        <button className="login-register">Create Amazon Account</button>
+        <button className="login-register" type="submit" onClick={register}>Create Amazon Account</button>
       </div>
     </div>
   );
