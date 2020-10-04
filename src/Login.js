@@ -40,7 +40,7 @@ export default function Login() {
           privacidad en caso de dudas.
         </p>
 
-        <button className="login-register" type="submit" onClick={register}>Create Amazon Account</button>
+        <button className="login-register" type="submitgit" onClick={register}>Create Amazon Account</button>
       </div>
     </div>
   );
